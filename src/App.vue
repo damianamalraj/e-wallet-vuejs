@@ -1,28 +1,80 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <AddCard @changeView="showAddCard = !showAddCard" v-if="showAddCard" />
+        <Home :cards="array" @changeView="showAddCard = !showAddCard" v-else />
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AddCard from "./view/AddCard.vue";
+import Home from "./view/Home.vue";
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    name: "App",
+    data() {
+        return {
+            showAddCard: false,
+            array: [
+                {
+                    cardNumber: "8767567645654565",
+                    cardholder: "Daniel Amalraj",
+                    expireMonth: "2022/21",
+                    CCV: "987",
+                    vendor: "Bitcoin Inc",
+                },
+                {
+                    cardNumber: "8767567645654565",
+                    cardholder: "Matthew Amalraj",
+                    expireMonth: "2022/21",
+                    CCV: "987",
+                    vendor: "Blockchain Inc",
+                },
+                {
+                    cardNumber: "8767567645654565",
+                    cardholder: "Luka Amalraj",
+                    expireMonth: "2022/21",
+                    CCV: "987",
+                    vendor: "Ninja Bank",
+                },
+            ],
+        };
+    },
+    components: {
+        Home,
+        AddCard,
+    },
+};
 </script>
 
 <style lang="scss">
+@import url("https://fonts.googleapis.com/css2?family=PT+Mono&family=Source+Sans+Pro:wght@700&display=swap");
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    display: flex;
+    // justify-content: center;
+
+    h1 {
+        font-family: "Source Sans Pro", sans-serif;
+        text-transform: uppercase;
+        font-size: 32px;
+    }
+    p {
+        font-family: "PT Mono", monospace;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    button {
+        font-family: "PT Mono", monospace;
+        text-transform: uppercase;
+        padding: 1rem;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 16px;
+    }
 }
 </style>
