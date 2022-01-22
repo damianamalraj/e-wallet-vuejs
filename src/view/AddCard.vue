@@ -74,8 +74,8 @@ export default {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    width: 400px;
-    height: 750px;
+    width: 414px;
+    height: 896px;
     background-color: whitesmoke;
 
     form {

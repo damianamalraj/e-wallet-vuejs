@@ -2,15 +2,17 @@
     <div class="home">
         <h1>e-wallet</h1>
         <p>active card</p>
-        <Card />
+        <Card :array="current" />
         <br />
         <div class="cards-list">
-            <Card
+            <a
                 class="list-item"
-                :array="array"
+                @click="change(array)"
                 v-for="array in cards"
-                :key="array"
-            />
+                :key="array.cardNumber"
+            >
+                <Card :array="array" />
+            </a>
         </div>
         <br />
         <button @click="$emit('changeView')">Add a new card</button>
@@ -21,10 +23,18 @@
 import Card from "../components/Card.vue";
 export default {
     data() {
-        return {};
+        return {
+            current: this.cards[0],
+            show: false,
+        };
     },
     props: ["cards"],
     components: { Card },
+    methods: {
+        change(x) {
+            this.current = x;
+        },
+    },
 };
 </script>
 
@@ -33,8 +43,8 @@ export default {
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    width: 400px;
-    height: 750px;
+    width: 414px;
+    height: 896px;
     background-color: whitesmoke;
 }
 
@@ -42,6 +52,10 @@ export default {
     display: flex;
     flex-direction: column;
     max-height: 400px;
+}
+
+.list-item {
+    cursor: pointer;
 }
 .list-item:nth-of-type(2) {
     transform: translateY(-80%);

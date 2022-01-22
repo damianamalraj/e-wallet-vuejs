@@ -16,21 +16,21 @@ export default {
             showAddCard: false,
             array: [
                 {
-                    cardNumber: "8767567645654565",
+                    cardNumber: "2347567645654565",
                     cardholder: "Daniel Amalraj",
                     expireMonth: "2022/21",
                     CCV: "987",
                     vendor: "Bitcoin Inc",
                 },
                 {
-                    cardNumber: "8767567645654565",
+                    cardNumber: "8657567645654565",
                     cardholder: "Matthew Amalraj",
                     expireMonth: "2022/21",
                     CCV: "987",
                     vendor: "Blockchain Inc",
                 },
                 {
-                    cardNumber: "8767567645654565",
+                    cardNumber: "8767864645654565",
                     cardholder: "Luka Amalraj",
                     expireMonth: "2022/21",
                     CCV: "987",
@@ -75,6 +75,10 @@ export default {
         border-radius: 8px;
         font-weight: bold;
         font-size: 16px;
+    }
+    button:hover {
+        background-color: black;
+        color: white;
     }
 }
 </style>
