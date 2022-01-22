@@ -1,6 +1,11 @@
 <template>
     <div id="app">
-        <AddCard @changeView="showAddCard = !showAddCard" v-if="showAddCard" />
+        <AddCard
+            @resivedData="pushData"
+            @changeView="showAddCard = !showAddCard"
+            v-if="showAddCard"
+            :cards="array"
+        />
         <Home :cards="array" @changeView="showAddCard = !showAddCard" v-else />
     </div>
 </template>
@@ -39,9 +44,22 @@ export default {
             ],
         };
     },
+    created() {
+        let savedData = JSON.parse(localStorage.getItem("cards"));
+
+        if (savedData) {
+            this.array = savedData;
+        }
+    },
     components: {
         Home,
         AddCard,
+    },
+    methods: {
+        pushData(data) {
+            this.array.push(data);
+            localStorage.setItem("cards", JSON.stringify(this.array));
+        },
     },
 };
 </script>

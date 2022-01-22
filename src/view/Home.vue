@@ -4,6 +4,7 @@
         <p>active card</p>
         <Card :array="current" />
         <br />
+        <br />
         <div class="cards-list">
             <a
                 class="list-item"
@@ -11,6 +12,9 @@
                 v-for="array in cards"
                 :key="array.cardNumber"
             >
+                <div>
+                    <img src="../assets/clear_black_24dp.svg" alt="" />
+                </div>
                 <Card :array="array" />
             </a>
         </div>
@@ -52,6 +56,20 @@ export default {
     display: flex;
     flex-direction: column;
     max-height: 400px;
+
+    div {
+        position: absolute;
+
+        transform: translateY(-50%);
+
+        img {
+            border: 1px solid #222;
+            color: whitesmoke;
+            border-radius: 50%;
+            background-color: whitesmoke;
+            padding: 0.2rem;
+        }
+    }
 }
 
 .list-item {

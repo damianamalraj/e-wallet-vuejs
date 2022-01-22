@@ -38,12 +38,12 @@ Du ska bygga en digital plånbok som samlar alla kreditkort. Det ska gå och se 
 
 Tekniker du ska använda i denna app är följande:
 
--   Local properties (data)
--   Inherited properties ( props )
--   Computed properties
--   Events ( Browser och Custom )
--   Methods
--   v-for ( incl. key and props in a loop )
+-   Local properties (data) ✅
+-   Inherited properties ( props ) ✅
+-   Computed properties ✅
+-   Events ( Browser och Custom ) ✅
+-   Methods ✅
+-   v-for ( incl. key and props in a loop ) ✅
 -   LocalStorge ( VG )
 -   Life Cycle Hook ( VG )
 
@@ -51,19 +51,19 @@ Tekniker du ska använda i denna app är följande:
 
 ### Home
 
--   Kortet högst upp är _active card_.
+-   Kortet högst upp är _active card_. ✅
 
--   Vid klick på kort i listan så ska den läggas som _active card_ högst upp i vyn.
+-   Vid klick på kort i listan så ska den läggas som _active card_ högst upp i vyn. ✅
 
--   Vid klick på **Add new card** ska man visa AddCard-view.
+-   Vid klick på **Add new card** ska man visa AddCard-view. ✅
 
--   AddCard-viewn ska ha ett formulär som speglas i en preview hur kortet skulle se ut.
+-   AddCard-viewn ska ha ett formulär som speglas i en preview hur kortet skulle se ut. ✅
 
--   Varje nytt card som läggs till ska synas i en lista i denna vy.
+-   Varje nytt card som läggs till ska synas i en lista i denna vy. ✅
 
 ### AddCard
 
--   Ett nytt kort ska kunna läggas till med följande information:
+-   Ett nytt kort ska kunna läggas till med följande information: ✅
 
 ```
 {
@@ -108,15 +108,15 @@ Brödtext: [PT Mono](https://fonts.google.com/specimen/PT+Mono?query=PT+Mono)
 
 **För att få Godkänt ska du:**
 
--   Ha gjort uppgiften med `vue create`
--   Gjort enligt spec och Figma skissen (det behöver inte vara exakt enligt design)
--   Det är en single page application (SPA).
+-   Ha gjort uppgiften med `vue create` ✅
+-   Gjort enligt spec och Figma skissen (det behöver inte vara exakt enligt design) ✅
+-   Det är en single page application (SPA). ✅
 
 **För att Väl Godkänt ska du:**
 
 -   Spara korten och alla nya kort som läggs till i local storage samt läsa från local storage
 -   Det ska gå att ta bort ett kort med en bekräftelse-dialog
--   Fälten när ett kort läggs till ska valideras så du i fältet med kortnummer enbart kan mata in siffror och max är 16 siffror. Fältet för namn ska enbart ta bokstäver.
+-   Fälten när ett kort läggs till ska valideras så du i fältet med kortnummer enbart kan mata in siffror och max är 16 siffror. Fältet för namn ska enbart ta bokstäver. ✅
 -   Validera så att du inte kan lägga till två kort med samma nummer
 
 ## Deadline och redovisningar
