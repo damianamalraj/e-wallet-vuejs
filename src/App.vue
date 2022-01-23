@@ -6,7 +6,12 @@
             v-if="showAddCard"
             :cards="array"
         />
-        <Home :cards="array" @changeView="showAddCard = !showAddCard" v-else />
+        <Home
+            @removeCard="removeCard"
+            :cards="array"
+            @changeView="showAddCard = !showAddCard"
+            v-else
+        />
     </div>
 </template>
 
@@ -58,6 +63,12 @@ export default {
     methods: {
         pushData(data) {
             this.array.push(data);
+            localStorage.setItem("cards", JSON.stringify(this.array));
+        },
+        removeCard(array) {
+            this.array = this.array.filter((card) => {
+                return card.cardNumber != array.cardNumber;
+            });
             localStorage.setItem("cards", JSON.stringify(this.array));
         },
     },
