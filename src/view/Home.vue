@@ -80,6 +80,7 @@ export default {
 
 <style scoped lang="scss">
 .home {
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     padding: 1rem;
@@ -110,11 +111,11 @@ export default {
     .modal {
         position: absolute;
         z-index: 150;
-        left: 8%;
+        margin: 2rem;
         top: 50%;
         border: 1px solid black;
         height: 200px;
-        width: 300px;
+        width: 350px;
         background-color: white;
         display: flex;
         flex-direction: column;

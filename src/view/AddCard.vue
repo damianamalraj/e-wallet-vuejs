@@ -168,6 +168,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .add-card {
+    border: 1px solid black;
     display: flex;
     flex-direction: column;
     padding: 1rem;
