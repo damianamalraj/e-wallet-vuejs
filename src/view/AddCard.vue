@@ -42,10 +42,10 @@
                 <p>vendor</p>
                 <select v-model="array.vendor" type="options">
                     <option></option>
-                    <option value="Bitcoin Inc">Bitcoin Inc</option>
-                    <option value="Blockchain Inc">Blockchain Inc</option>
-                    <option value="Evil Corp">Evil Corp</option>
-                    <option value="Ninja Bank">Ninja Bank</option>
+                    <option value="bitcoin">Bitcoin Inc</option>
+                    <option value="blockchain">Blockchain Inc</option>
+                    <option value="evil">Evil Corp</option>
+                    <option value="ninja">Ninja Bank</option>
                 </select>
                 <br />
             </div>

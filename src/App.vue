@@ -25,27 +25,27 @@ export default {
         return {
             showAddCard: false,
             array: [
-                {
-                    cardNumber: "2347567645654565",
-                    cardholder: "Daniel Amalraj",
-                    expireMonth: "2022/21",
-                    CCV: "987",
-                    vendor: "Bitcoin Inc",
-                },
-                {
-                    cardNumber: "8657567645654565",
-                    cardholder: "Matthew Amalraj",
-                    expireMonth: "2022/21",
-                    CCV: "987",
-                    vendor: "Blockchain Inc",
-                },
-                {
-                    cardNumber: "8767864645654565",
-                    cardholder: "Luka Amalraj",
-                    expireMonth: "2022/21",
-                    CCV: "987",
-                    vendor: "Ninja Bank",
-                },
+                // {
+                //     cardNumber: "2347567645654565",
+                //     cardholder: "Daniel Amalraj",
+                //     expireMonth: "2022/21",
+                //     CCV: "987",
+                //     vendor: "Bitcoin Inc",
+                // },
+                // {
+                //     cardNumber: "8657567645654565",
+                //     cardholder: "Matthew Amalraj",
+                //     expireMonth: "2022/21",
+                //     CCV: "987",
+                //     vendor: "Blockchain Inc",
+                // },
+                // {
+                //     cardNumber: "8767864645654565",
+                //     cardholder: "Luka Amalraj",
+                //     expireMonth: "2022/21",
+                //     CCV: "987",
+                //     vendor: "Ninja Bank",
+                // },
             ],
         };
     },

@@ -1,13 +1,5 @@
 <template>
-    <article
-        :class="[
-            'card',
-            { bitcoin: array.vendor == 'Bitcoin Inc' },
-            { blockchain: array.vendor == 'Blockchain Inc' },
-            { evil: array.vendor == 'Evil Corp' },
-            { ninja: array.vendor == 'Ninja Bank' },
-        ]"
-    >
+    <article :class="['card', array.vendor]">
         <section>
             <div>
                 <img src="../assets/wifi.svg" alt="" />
@@ -15,23 +7,8 @@
             </div>
             <div>
                 <img
-                    v-if="array.vendor == 'Bitcoin Inc'"
-                    src="../assets/bitcoin.svg"
-                    alt=""
-                />
-                <img
-                    v-if="array.vendor == 'Blockchain Inc'"
-                    src="../assets/blockchain.svg"
-                    alt=""
-                />
-                <img
-                    v-if="array.vendor == 'Evil Corp'"
-                    src="../assets/evil.svg"
-                    alt=""
-                />
-                <img
-                    v-if="array.vendor == 'Ninja Bank'"
-                    src="../assets/ninja.svg"
+                    v-if="array.vendor"
+                    :src="require('../assets/' + array.vendor + '.svg')"
                     alt=""
                 />
             </div>

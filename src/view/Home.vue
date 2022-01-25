@@ -101,12 +101,16 @@ export default {
         color: white;
     }
     .modal-container {
+        margin: 0;
         z-index: 100;
         position: absolute;
         width: 414px;
         height: 896px;
         background-color: black;
-        opacity: 50%;
+        opacity: 4%;
+        box-shadow: -1px -1px 48px 11px rgba(0, 0, 0, 1);
+        -webkit-box-shadow: -1px -1px 48px 11px rgba(0, 0, 0, 1);
+        -moz-box-shadow: -1px -1px 48px 11px rgba(0, 0, 0, 1);
     }
     .modal {
         position: absolute;
