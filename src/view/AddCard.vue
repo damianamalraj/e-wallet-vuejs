@@ -5,7 +5,7 @@
             Add a new <br />
             banK card
         </h1>
-        <Card :array="array" />
+        <Card :card="array" />
         <br />
         <form @submit.prevent="">
             <div>
@@ -23,6 +23,7 @@
             <div>
                 <p>cardholder name</p>
                 <input
+                    maxlength="25"
                     :class="{ error: showCharacterError }"
                     v-model="array.cardholder"
                     type="text"
@@ -35,7 +36,7 @@
                 </div>
                 <div>
                     <p>ccv</p>
-                    <input v-model="array.CCV" type="text" />
+                    <input maxlength="3" v-model="array.CCV" type="text" />
                 </div>
             </section>
             <div>

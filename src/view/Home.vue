@@ -5,7 +5,7 @@
 
         <h1>e-wallet</h1>
         <p>active card</p>
-        <Card :array="current" />
+        <Card :card="current" />
         <br />
         <br />
         <div v-if="showModal" class="modal-container"></div>
@@ -48,7 +48,7 @@
                         <img src="../assets/clear_black_24dp.svg" alt="" />
                     </div>
                 </a>
-                <Card :array="array" />
+                <Card :card="array" />
             </a>
         </div>
         <br />

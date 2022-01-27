@@ -121,6 +121,6 @@ Brödtext: [PT Mono](https://fonts.google.com/specimen/PT+Mono?query=PT+Mono)
 
 ## Deadline och redovisningar
 
-Deadline är 27/1 då ni kommer redovisa i grupper i samma stil som tidigare.
+Deadline är 27/1 då ni kommer redovisa i grupper i samma stil som tidigare. ✅
 
-Utöver detta ska ni även göra en delredovisning för läraren innan detta tillfälle vilket sker lektionen innan eller på repetitionstillfället beroende på tid.
+Utöver detta ska ni även göra en delredovisning för läraren innan detta tillfälle vilket sker lektionen innan eller på repetitionstillfället beroende på tid. ✅

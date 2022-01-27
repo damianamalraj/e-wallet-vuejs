@@ -1,20 +1,20 @@
 <template>
-    <article :class="['card', array.vendor]">
+    <article :class="['card', card.vendor]">
         <section>
             <div>
-                <img src="../assets/wifi.svg" alt="" />
-                <img src="../assets/chip.svg" alt="" />
+                <img src="../assets/wifi.svg" alt="wifi" />
+                <img src="../assets/chip.svg" alt="chip" />
             </div>
             <div>
                 <img
-                    v-if="array.vendor"
-                    :src="require('../assets/' + array.vendor + '.svg')"
-                    alt=""
+                    v-if="card.vendor"
+                    :src="require('../assets/' + card.vendor + '.svg')"
+                    alt="brand"
                 />
             </div>
         </section>
         <section>
-            <h2 v-if="array.cardNumber <= 0">xxxx xxxx xxxx xxxx</h2>
+            <h2 v-if="card.cardNumber <= 0">xxxx xxxx xxxx xxxx</h2>
             <h2>
                 {{ cardNumberSpaced }}
             </h2>
@@ -22,16 +22,16 @@
         <section>
             <div>
                 <p>cardholder name</p>
-                <h3 v-if="array.cardholder <= 0">Mynameis Jeff</h3>
+                <h3 v-if="card.cardholder <= 0">Mynameis Jeff</h3>
                 <h3>
-                    {{ array.cardholder }}
+                    {{ card.cardholder }}
                 </h3>
             </div>
             <div>
                 <p>Valid thru</p>
-                <h3 v-if="array.expireMonth <= 0">0000/00</h3>
-                <h3>
-                    {{ array.expireMonth }}
+                <h3 v-if="card.expireMonth <= 0">MM/YY</h3>
+                <h3 v-if="card.expireMonth">
+                    {{ dateFormate }}
                 </h3>
             </div>
         </section>
@@ -40,17 +40,24 @@
 
 <script>
 export default {
-    props: ["array"],
+    props: ["card"],
     computed: {
         cardNumberSpaced() {
             return (
-                this.array.cardNumber.slice(0, 4) +
+                this.card.cardNumber.slice(0, 4) +
                 " " +
-                this.array.cardNumber.slice(4, 8) +
+                this.card.cardNumber.slice(4, 8) +
                 " " +
-                this.array.cardNumber.slice(8, 12) +
+                this.card.cardNumber.slice(8, 12) +
                 " " +
-                this.array.cardNumber.slice(12, 16)
+                this.card.cardNumber.slice(12, 16)
+            );
+        },
+        dateFormate() {
+            return (
+                this.card.expireMonth.slice(5, 7) +
+                "/" +
+                this.card.expireMonth.slice(2, 4)
             );
         },
     },
