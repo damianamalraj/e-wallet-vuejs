@@ -77,6 +77,14 @@ export default {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=PT+Mono&family=Source+Sans+Pro:wght@700&display=swap");
+
+* {
+    margin: 0;
+}
+html,
+body {
+    height: 100%;
+}
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -85,6 +93,7 @@ export default {
     color: #2c3e50;
     display: flex;
     justify-content: center;
+    background-color: black;
 
     h1 {
         font-family: "Source Sans Pro", sans-serif;
