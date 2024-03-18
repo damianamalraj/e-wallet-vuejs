@@ -1,4 +1,4 @@
 module.exports = {
-    outputDir: "docs",
-    publicPath: "/iths-e-wallet/",
+  outputDir: 'docs',
+  publicPath: '/e-wallet-vuejs/',
 };
